@@ -1,0 +1,30 @@
+application: karnak-gallery
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+
+- url: /assets
+  static_dir: www/assets
+  secure: optional
+
+
+- url: /([^/]+)/?
+  static_files: www/\1.html
+  upload: www/(.+).html
+  expiration: "15m"
+
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+  expiration: "15m"
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
