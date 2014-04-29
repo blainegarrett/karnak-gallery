@@ -1,23 +1,25 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Watch for free the documentary that follows Jacob Alexander as he pursues his dream of building an art gallery in the heart of downtown Minneapolis. Experience the many difficulties and meet the collection of characters Jacob encounters while attempting his ultimate creation. Featuring Jacob Alexander, Dim Media, and more.">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>All Over The Walls (2011) Watch for Free</title>
+
+	<!-- Open Graph data -->
+	<meta property="og:image" content="http://karnakgallery.com/assets/poster_cropped.jpg" />
 
     <!-- Bootstrap core CSS -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="/assets/magnific-popup.css">
+	
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,177 +27,274 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+		<style>
+		/* Move down content because we have a fixed navbar that is 50px tall */
+		body {
+		  padding-top: 50px;
+		  padding-bottom: 20px;
+		  font-family: 'Open Sans', sans-serif;
+		}
+
+		#big-video-wrap {
+			overflow: hidden;
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index:100;
+		}
+
+		#main-menu, #jumbotron-container, #main-content-container, footer {
+			z-index:500;
+			position: relative;
+		}
+
+		#jumbotron-container { 
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+			background-color: transparent; text-align:center;
+			color: #fff;
+			padding:150px;
+		}
+		#jumbotron-container h1 {
+			margin-bottom:50px;
+		}
+		#jumbotron-container p {
+			margin-bottom:25px;
+		}
+		#jumbotron-container .btn {
+			font-size:25px;
+		}
+
+
+		#main-content-container {
+			background-color: #ffffff;
+		}
+		footer {
+			padding-left:20px;
+		}
+
+	/*
+	TODO:
+	[ ] favicon
+	[ ] page description
+	[ ] Share meta tools
+	[ ] 
+	[ ]  
+	*/
+
+		</style>
+
   </head>
-<!-- NAVBAR
-================================================== -->
+
   <body>
-	
-	<style>
-	body {
-		color:#ffffff;
-	}
-	#big-video-wrap {
-	overflow: hidden;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	}
-	</style>
-	
-	<div id="big-video-wrap">
-		<div id="big-video-vid" class="video-js vjs-default-skin vjs-playing" width="300" height="150" style="width: 1411px; height: 793.6875px; display: block; top:
-	-102.34375px; left: 0px;">
-			<video id="big-video-vid_html5_api" class="vjs-tech" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="http://wbpreview.com/previews/WB0L500N4/assets/video/frontier.mp4" style="position: absolute; width: 100%;">
-			</video>
+
+<!-- Start Menu -->
+<div id="main-menu-container" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/" title="All Over The Walls">All Over The Walls</a>
 		</div>
+		
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav pull-right">
+				<!-- 
+				<li><a href="#">Watch</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Cast</a></li>
+				<li><a href="#">Trailer</a></li>
+				<li><a href="#">Contact</a></li>
+			-->
+			</ul>
+		</div><!--/.navbar-collapse -->
 	</div>
-	
-	
-	
-    <div class="navbar-wrapper">
-      <div class="container">
+</div>
+<!-- End Menu -->
 
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-      </div>
-    </div>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div id="jumbotron-container" class="jumbotron">
+	<div class="container">
+		<h1>All Over The Walls</h1>
+		<p>A documentary that follows Jacob Alexander as he pursues his dream of building an art gallery in the heart of downtown Minneapolis. Experience the many difficulties and meet the collection of characters Jacob encounters while attempting his ultimate creation.</p>
+		<p>
+			
+			<!-- <a class="btn btn-xlg btn-info" role="button" data-toggle="modal" data-target="#movie-dialog">Watch Now &raquo;</a> -->
+			
+			<a class="btn btn-xlg btn-info" id="watch-movie-link" role="button" a href="https://www.youtube.com/watch?v=0xWtgKkeG8I">Watch Now &raquo;</a>
+		</p>
+	</div>
+</div>
+<!-- End Main Jumbo -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
+    <div id="main-content-container">
+	<div class="container">
+		<!-- 
       <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+        <div class="col-md-4">
           <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-4">
           <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
+       </div>
+        <div class="col-md-4">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
+		-->
+
       </div>
+</div>
 
-      <hr class="featurette-divider">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2014 <a href="https://www.youtube.com/user/BlueBridgeMediaGroup">Blue Bridge Video Productions</a> | Website by Blaine Garrett of <a href="http://www.dimmedia.com">Dim Media</a></p>
       </footer>
+    </div> <!-- /container -->
 
-    </div><!-- /.container -->
+
+	
+	
+	
+	
+	
+	
+	
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- <script src="../../assets/js/docs.min.js"></script> -->
+
+   <script src="/assets/jquery-ui-1.8.22.custom.min.js"></script>
+    <script src="/assets/jquery.imagesloaded.min.js"></script>
+    <script src="/assets/video.js"></script>
+    <script src="/assets/modernizr-2.5.3.min.js"></script>
+    <script src="/assets/bigvideo.js"></script>
+    <script src="/assets/jquery.magnific-popup.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-50391690-1', 'karnakgallery.com');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<script>
+	$(function () {
+	    $(window).scroll(function(){
+	    // global scroll to top button
+	        if ($(this).scrollTop() > 300) {
+	            $('.scrolltop').fadeIn();
+	        } else {
+	            $('.scrolltop').fadeOut();
+	        }        
+	    });
+
+	    // scroll nav
+	    $('.scroller').click(function(){
+	    	var section = $($(this).data("section"));
+	    	var top = section.offset().top-82;
+	        $("html, body").animate({ scrollTop: top }, 700);
+	        return false;
+	    });
+
+		
+
+
+	    // For the purpose of the demo this allows you to toggle the background between video and img
+	    $('.toggle_video').click(function(){
+
+		   $('#big-video-wrap').fadeToggle();
+		   return false; 
+
+	    });
+
+		// BigVideo Setup
+	    var BV = new $.BigVideo({useFlashForFirefox:false});
+		BV.init();
+
+	    if (Modernizr.touch) {
+	    	// fallback image for mobile devices
+	        BV.show('/assets/mobile_splash_1.png');
+	    } else {
+	        BV.show('assets/karnak_splash_full_crop.m4v',
+	        {ambient:true, doLoop:true, altSource:'assets/karnak_splash_full_crop.ogg'});
+
+			$('#watch-movie-link').magnificPopup({
+			          disableOn: 700,
+			          type: 'iframe',
+			          mainClass: 'mfp-fade',
+			          removalDelay: 160,
+			          preloader: false,
+			          fixedContentPos: false
+			        });
+	    }   
+
+
+	});
+	</script>
+
+
 
   </body>
 </html>
