@@ -27,67 +27,38 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-		<style>
-		/* Move down content because we have a fixed navbar that is 50px tall */
-		body {
-		  padding-top: 50px;
-		  padding-bottom: 20px;
-		  font-family: 'Open Sans', sans-serif;
-		}
+	<style>
+		body { font-family: 'Open Sans', sans-serif; background-image: url('/assets/mobile_splash_1.png'); }
 
-		#big-video-wrap {
-			overflow: hidden;
-			position: fixed;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			z-index:100;
-		}
+		/* Styles for the Video Background Effect */
+		#big-video-wrap { overflow: hidden; position: fixed; height: 100%; width: 100%; top: 0; left: 0; z-index:100; }
+		#main-menu, .main-content-container, footer { z-index:500; position: relative; }
 
-		#main-menu, #jumbotron-container, #main-content-container, footer {
-			z-index:500;
-			position: relative;
-		}
-
-		#jumbotron-container { 
-			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-			background-color: transparent; text-align:center;
-			color: #fff;
-			padding:150px;
-		}
-		#jumbotron-container h1 {
-			margin-bottom:50px;
-		}
-		#jumbotron-container p {
-			margin-bottom:25px;
-		}
-		#jumbotron-container .btn {
-			font-size:25px;
-		}
+		/* Generic Section Styles */
+		.main-content-container { background-color: #000; padding-top: 100px; }
+			.content-heading h2 { text-align:center; color:#fff; }
 
 
-		#main-content-container {
-			background-color: #ffffff;
-		}
-		footer {
-			padding-left:20px;
-		}
+		/* "Watch" Section */
+		#section_watch {  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); background-color: transparent; text-align:center; color: #fff; padding:150px; }
+			#section_watch h1 { margin-bottom:50px; }
+			#section_watch p { margin-bottom:25px; }
+			#section_watch .btn { font-size:25px; }
 
-	/*
-	TODO:
-	[ ] favicon
-	[ ] page description
-	[ ] Share meta tools
-	[ ] 
-	[ ]  
-	*/
+		/* About Section */
+		#section_about  { color : #ccc; padding-bottom: 100px; }
+		#section_about  h2 { margin-bottom:40px; }
 
-		</style>
+		/* Cast Section */
+		#section_cast { background-color : #333; opacity: .9; color: #888; }
+			#section_cast .profile-block { text-align: center; padding-top: 40px; }
+				#section_cast .profile-block img { margin: auto; }
 
+		footer { background-color: black; padding: 50px; }
+	</style>
   </head>
 
-  <body>
+<body data-spy="scroll" data-target=".navbar-collapse">
 
 <!-- Start Menu -->
 <div id="main-menu-container" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -104,13 +75,10 @@
 		
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav pull-right">
-				<!-- 
-				<li><a href="#">Watch</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Cast</a></li>
-				<li><a href="#">Trailer</a></li>
-				<li><a href="#">Contact</a></li>
-			-->
+
+				<li><a href="#section_watch">Watch</a></li>
+				<li><a href="#section_about">About</a></li>
+				<li><a href="#section_cast">Cast</a></li>
 			</ul>
 		</div><!--/.navbar-collapse -->
 	</div>
@@ -120,7 +88,7 @@
 
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div id="jumbotron-container" class="jumbotron">
+<div id="section_watch" class="jumbotron main-content-container">
 	<div class="container">
 		<h1>All Over The Walls</h1>
 		<p>A documentary that follows Jacob Alexander as he pursues his dream of building an art gallery in the heart of downtown Minneapolis. Experience the many difficulties and meet the collection of characters Jacob encounters while attempting his ultimate creation.</p>
@@ -128,78 +96,129 @@
 			
 			<!-- <a class="btn btn-xlg btn-info" role="button" data-toggle="modal" data-target="#movie-dialog">Watch Now &raquo;</a> -->
 			
-			<a class="btn btn-xlg btn-info" id="watch-movie-link" role="button" a href="https://www.youtube.com/watch?v=0xWtgKkeG8I">Watch Now &raquo;</a>
+			<a class="btn btn-xlg btn-info" id="watch-movie-link" role="button" href="https://www.youtube.com/watch?v=0xWtgKkeG8I">Watch Now &raquo;</a>
 		</p>
 	</div>
 </div>
 <!-- End Main Jumbo -->
 
-
-
-
-
-    <div id="main-content-container">
+	
+<!-- Start About Section -->
+<div id="section_about" class="main-content-container section-container">
 	<div class="container">
-		<!-- 
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-		-->
+		<div class="row content-heading">
+			<div class="col-md-12"><h2>The Struggles of an Starting a Gallery</h2></div>
+		</div>
 
-      </div>
+		<div class="row">
+			<div class="col-md-3">
+				<img src="/assets/poster_small.jpg" class="img-responsive" alt="All Over The Walls Movie Poster by Dim Media">
+			</div>
+			<div class="col-md-6">
+				<p>
+				In 2010, Jacob Alexander recruited <a href="http://www.bluebridgevideo.com/" target="_blank">Blue Bridge Media</a> to document the creation of his most ambitious work yet: <em>Karnak Gallery</em>.
+				Located in the heart of Downtown Minneapolis (mere blocks from the historic First Ave nightclub), the gallery was to serve as an artistic oasis in the midst of the bustling downtown nightlife.  After nearly a year of planning, the gallery failed in only a few months. Lack of attendance, disorganization, and even sabotage doomed it nearly from the start. 
+				</p>
+				<p>
+				What started off as process documentation, the documentary turned into a tale of the trials and tribulations of starting an art gallery in Minneapolis.
+				This is just one story of the struggles of many galleries in the Twin Cities to share the same fate.
+				</p>
+					
+					
+				<h3>Honors</h3>
+				<p>Featured at the 2011 Minneapolis/St.Paul International Film Festival</p>
+				<p>Winner of Best Documentary Feature at the 2011 Highway 61 Film Festival<p>
+				<p>Production funded through a successful <a href="http://www.indiegogo.com/All-Over-the-Walls-A-Minneapolis-Made-Documentary">Indiegogo campaign</a></p>
+			</div>
+
+			<div class="col-md-3">
+				<a href="http://pinecity.wordpress.com/2011/10/10/highway-61-film-festival-rolls-in-oct-14-15/" target="_blank"><img src="/assets/hw61_logo.jpg" style="width:100%" alt="Highway 61 Film Festival" /></a>
+				<br /><br />
+				<a href="http://www.bluebridgevideo.com/" target="_blank"><img src="/assets/blue_bridge_logo.png" style="width:100%" alt="Blue Bridge Media" /></a>				
+			</div>
+
+		</div>
+	</div>
 </div>
 
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
+
+<!-- Start Cast Section -->
+<div id="section_cast" class="main-content-container section-container">
+	<div class="container">
+		<div class="row content-heading">
+			<div class="col-md-12"><h2>The Players</h2></div>
+		</div>
+			
+	<div class="row">
+
+
+		<div class="col-md-4 profile-block">
+			<img src="/assets/danielle.jpg" class="img-responsive img-circle" alt="Danielle" />
+			<h3>Danielle Pebbles</h3>
+			<p>Artist, model, curator, event coordinator</p>
+		</div>
+		<div class="col-md-4 profile-block">
+			<img src="/assets/jacob.jpg" class="img-responsive img-circle" alt="Jacob" />
+			<h3>Jacob Alexander</h3>
+			<p>Fine artist, body painter, brainchild of Karnak Gallery</p>
+		</div>
+		<div class="col-md-4 profile-block">
+			<img src="/assets/jorilla.jpg" class="img-responsive img-circle" alt="Joe" />
+			<h3>Joe &quot;Jorilla&quot; Lipscomb</h3>
+			<p>Fine artist, muralist, curator, member of Dim Media</p>
+		</div>
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-4 profile-block">
+			<img src="/assets/oni.jpg" class="img-responsive img-circle" alt="Oni" />
+			<h3>Oni Sakti</h3>
+			<p>Fine artist, musician, composer</p>
+		</div>
+
+		<div class="col-md-4 profile-block">
+			<img src="/assets/vince.jpg" class="img-responsive img-circle" alt="Vince" />
+			<h3>Vince Tannehill</h3>
+			<p>Engineer, investor, council</p>
+		</div>
+
+		<div class="col-md-4 profile-block">
+			<img src="/assets/jamez.jpg" class="img-responsive img-circle" alt="Jamez" />
+			<h3>Jamez Smith</h3>
+			<p>Poet, DJ, event coordinator</p>
+		</div>
+
+	</div>
+
+
+	<div class="row">
+
+		<div class="col-md-4 profile-block">
+			<img src="/assets/jobot.jpg" class="img-responsive img-circle" alt="Jobot" />
+			<h3>Joe &quot;Jobot&quot; Bartuski</h3>
+			<p>DJ, producer, event coordinator</p>
+		</div>
+		
+		<div class="col-md-4 profile-block">
+			<img src="/assets/albert.jpg" class="img-responsive img-circle" alt="Albert" />
+			<h3>Albert Elmore</h3>
+			<p>Musician, event coordinator, technical support</p>
+		</div>
+
+		<div class="col-md-4 profile-block">
+			<img src="/assets/trey.jpg" class="img-responsive img-circle" alt="Trey" />
+			<h3>Trey Mews</h3>
+			<p>Marketing, public relations, logistics</p>
+		</div>
+	</div>
+</div>
+<!-- End Cast Section -->
+
 
       <footer>
-        <p>&copy; 2014 <a href="https://www.youtube.com/user/BlueBridgeMediaGroup">Blue Bridge Video Productions</a> | Website by Blaine Garrett of <a href="http://www.dimmedia.com">Dim Media</a></p>
+        <p>&copy; 2014 <a href="http://www.bluebridgevideo.com/" target="_blank">Blue Bridge Video Productions</a> | Website by Blaine Garrett of <a href="http://www.dimmedia.com" target="_blank">Dim Media</a></p>
       </footer>
     </div> <!-- /container -->
 
@@ -251,20 +270,19 @@
 	    });
 
 	    // scroll nav
-	    $('.scroller').click(function(){
-	    	var section = $($(this).data("section"));
-	    	var top = section.offset().top-82;
+	    $('.navbar-nav a').click(function(){
+	    	var section = $($(this).attr("href"));
+	    	var top = $(section).offset().top;
 	        $("html, body").animate({ scrollTop: top }, 700);
 	        return false;
 	    });
-
-		
 
 
 	    // For the purpose of the demo this allows you to toggle the background between video and img
 	    $('.toggle_video').click(function(){
 
 		   $('#big-video-wrap').fadeToggle();
+		   BV.getPlayer().pause();
 		   return false; 
 
 	    });
@@ -286,7 +304,8 @@
 			          mainClass: 'mfp-fade',
 			          removalDelay: 160,
 			          preloader: false,
-			          fixedContentPos: false
+			          fixedContentPos: false,
+					  callbacks: {open: function(){ $('#big-video-wrap').fadeToggle(); }, close: function(){ $('#big-video-wrap').fadeToggle(); }}
 			        });
 	    }   
 

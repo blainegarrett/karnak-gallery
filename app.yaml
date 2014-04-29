@@ -9,22 +9,21 @@ handlers:
   static_files: www/assets/favicon.ico
   upload: www/assets/favicon\.ico
 
+- url: /(.+)/
+  static_files: www/\1/index.html
+  upload: www/(.+)/index.html
 
-- url: /assets
-  static_dir: www/assets
-  secure: optional
-
-
-- url: /([^/]+)/?
-  static_files: www/\1.html
-  upload: www/(.+).html
-  expiration: "15m"
-
+# site root
 - url: /
   static_files: www/index.html
   upload: www/index.html
-  expiration: "15m"
 
-libraries:
-- name: webapp2
-  version: "2.5.2"
+# For folders without trailing slashes - ideally a 301 redirect, but we're static & it isn't 2004
+- url: /([^\.]+)([^/])
+  static_files: www/\1\2/index.html
+  upload: www/(.+)
+
+# Redirect Everything else
+- url: /(.+)
+  static_files: www/\1
+  upload: www/(.+)
