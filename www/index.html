@@ -56,6 +56,25 @@
 
 		footer { background-color: black; padding: 50px; }
 	</style>
+	<script type="text/javascript">
+	// Sharaholic code
+	//<![CDATA[
+	  (function() {
+	    var shr = document.createElement('script');
+	    shr.setAttribute('data-cfasync', 'false');
+	    shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+	    shr.type = 'text/javascript'; shr.async = 'true';
+	    shr.onload = shr.onreadystatechange = function() {
+	      var rs = this.readyState;
+	      if (rs && rs != 'complete' && rs != 'loaded') return;
+	      var site_id = '3d2c4b76924d3fde8d24865717b6c715';
+	      try { Shareaholic.init(site_id); } catch (e) {}
+	    };
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(shr, s);
+	  })();
+	//]]>
+	</script>
   </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -107,12 +126,12 @@
 <div id="section_about" class="main-content-container section-container">
 	<div class="container">
 		<div class="row content-heading">
-			<div class="col-md-12"><h2>The Struggles of an Starting a Gallery</h2></div>
+			<div class="col-md-12"><h2>The Struggles of Starting a Gallery</h2></div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-3">
-				<img src="/assets/poster_small.jpg" class="img-responsive" alt="All Over The Walls Movie Poster by Dim Media">
+				<a href="/assets/poster_web.jpg"><img src="/assets/poster_small.jpg" class="img-responsive" alt="All Over The Walls Movie Poster by Dim Media"><span>Click to View Poster</span></a>
 			</div>
 			<div class="col-md-6">
 				<p>
@@ -213,6 +232,10 @@
 			<p>Marketing, public relations, logistics</p>
 		</div>
 	</div>
+	
+	<br />
+	<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='7152087'></div>
+	
 </div>
 <!-- End Cast Section -->
 
@@ -312,7 +335,6 @@
 
 	});
 	</script>
-
 
 
   </body>
