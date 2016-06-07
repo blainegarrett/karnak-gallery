@@ -19,7 +19,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/magnific-popup.css">
-	
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,6 +55,13 @@
 				#section_cast .profile-block img { margin: auto; }
 
 		footer { background-color: black; padding: 50px; }
+
+		/* Mobile Fixes */
+		@media (max-width: 767px) {
+			#section_watch { padding:10px; }
+			#section_watch { padding-top:50px; }
+		}
+
 	</style>
 	<script type="text/javascript">
 	// Sharaholic code
@@ -91,7 +98,7 @@
 			</button>
 			<a class="navbar-brand" href="/" title="All Over The Walls">All Over The Walls</a>
 		</div>
-		
+
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav pull-right">
 
@@ -112,16 +119,16 @@
 		<h1>All Over The Walls</h1>
 		<p>A documentary that follows Jacob Alexander as he pursues his dream of building an art gallery in the heart of downtown Minneapolis. Experience the many difficulties and meet the collection of characters Jacob encounters while attempting his ultimate creation.</p>
 		<p>
-			
+
 			<!-- <a class="btn btn-xlg btn-info" role="button" data-toggle="modal" data-target="#movie-dialog">Watch Now &raquo;</a> -->
-			
+
 			<a class="btn btn-xlg btn-info" id="watch-movie-link" role="button" href="https://www.youtube.com/watch?v=0xWtgKkeG8I">Watch Now &raquo;</a>
 		</p>
 	</div>
 </div>
 <!-- End Main Jumbo -->
 
-	
+
 <!-- Start About Section -->
 <div id="section_about" class="main-content-container section-container">
 	<div class="container">
@@ -135,15 +142,15 @@
 			</div>
 			<div class="col-md-6">
 				<p>
-				In 2010, Jacob Alexander recruited <a href="http://www.bluebridgevideo.com/" target="_blank">Blue Bridge Media</a> to document the creation of his most ambitious work yet: <em>Karnak Gallery</em>.
-				Located in the heart of Downtown Minneapolis (mere blocks from the historic First Ave nightclub), the gallery was to serve as an artistic oasis in the midst of the bustling downtown nightlife.  After nearly a year of planning, the gallery failed in only a few months. Lack of attendance, disorganization, and even sabotage doomed it nearly from the start. 
+				In 2010, <a href="http://www.bluebridgevideo.com/" target="_blank">Blue Bridge Media</a> contacted artist Jacob Alexander to document the creation of his most ambitious work yet: <em>Karnak Gallery</em>.
+				Located in the heart of Downtown Minneapolis (mere blocks from the historic First Ave nightclub), the gallery was to serve as an artistic oasis in the midst of the bustling downtown nightlife.  After nearly a year of planning, the gallery failed in only a few months. Lack of attendance, disorganization, and even sabotage doomed it nearly from the start.
 				</p>
 				<p>
 				What started off as process documentation, the documentary turned into a tale of the trials and tribulations of starting an art gallery in Minneapolis.
 				This is just one story of the struggles of many galleries in the Twin Cities to share the same fate.
 				</p>
-					
-					
+
+
 				<h3>Honors</h3>
 				<p>Featured at the 2011 Minneapolis/St.Paul International Film Festival</p>
 				<p>Winner of Best Documentary Feature at the 2011 Highway 61 Film Festival<p>
@@ -153,7 +160,7 @@
 			<div class="col-md-3">
 				<a href="http://pinecity.wordpress.com/2011/10/10/highway-61-film-festival-rolls-in-oct-14-15/" target="_blank"><img src="/assets/hw61_logo.jpg" style="width:100%" alt="Highway 61 Film Festival" /></a>
 				<br /><br />
-				<a href="http://www.bluebridgevideo.com/" target="_blank"><img src="/assets/blue_bridge_logo.png" style="width:100%" alt="Blue Bridge Media" /></a>				
+				<a href="http://www.bluebridgevideo.com/" target="_blank"><img src="/assets/blue_bridge_logo.png" style="width:100%" alt="Blue Bridge Media" /></a>
 			</div>
 
 		</div>
@@ -167,7 +174,7 @@
 		<div class="row content-heading">
 			<div class="col-md-12"><h2>The Players</h2></div>
 		</div>
-			
+
 	<div class="row">
 
 
@@ -219,7 +226,7 @@
 			<h3>Joe &quot;Jobot&quot; Bartuski</h3>
 			<p>DJ, producer, event coordinator</p>
 		</div>
-		
+
 		<div class="col-md-4 profile-block">
 			<img src="/assets/albert.jpg" class="img-responsive img-circle" alt="Albert" />
 			<h3>Albert Elmore</h3>
@@ -232,10 +239,10 @@
 			<p>Marketing, public relations, logistics</p>
 		</div>
 	</div>
-	
+
 	<br />
 	<div class='shareaholic-canvas' data-app='share_buttons' data-app-id='7152087'></div>
-	
+
 </div>
 <!-- End Cast Section -->
 
@@ -246,13 +253,13 @@
     </div> <!-- /container -->
 
 
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 
 
     <!-- Bootstrap core JavaScript
@@ -289,7 +296,7 @@
 	            $('.scrolltop').fadeIn();
 	        } else {
 	            $('.scrolltop').fadeOut();
-	        }        
+	        }
 	    });
 
 	    // scroll nav
@@ -306,7 +313,7 @@
 
 		   $('#big-video-wrap').fadeToggle();
 		   BV.getPlayer().pause();
-		   return false; 
+		   return false;
 
 	    });
 
@@ -330,7 +337,7 @@
 			          fixedContentPos: false,
 					  callbacks: {open: function(){ $('#big-video-wrap').fadeToggle(); }, close: function(){ $('#big-video-wrap').fadeToggle(); }}
 			        });
-	    }   
+	    }
 
 
 	});
